@@ -22,8 +22,8 @@ a {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   font: inherit;
-  background-color: var(--button-primary);
-  border: 1px solid var(--button-primary);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   color: white;
   cursor: pointer;
   border-radius: 5px;
@@ -35,13 +35,13 @@ a:active,
 button:hover,
 button:active {
   background-color: transparent;
-  border-color: var(--button-primary);
-  color: var(--button-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
-.flat {
+.gray {
   background-color: transparent;
-  color: #3a0061;
-  border: none;
+  color: var(--color-gray);
+  border-color: var(--color-gray);
 }
 .outline {
   background-color: transparent;
@@ -53,11 +53,13 @@ button:active {
   border-color: #72147E;
   color: white;
 }
-.flat:hover,
-.flat:active,
+.gray:hover,
+.gray:active,
 .outline:hover,
 .outline:active {
-  background-color: #edd2ff;
+  background-color: transparent;
+  border-color: var(--button-gray);
+  color: var(--button-gray);
 }
 .neon:hover,
 .neon:active {

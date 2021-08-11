@@ -7,6 +7,7 @@ import BaseCard from './components/UI/BaseCard.vue'
 import BaseButton from './components/UI/BaseButton.vue'
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
+import Dialog from 'primevue/dialog';
 
 
 import 'primevue/resources/themes/saga-blue/theme.css'       //theme
@@ -19,6 +20,7 @@ app.component('BaseCard', BaseCard);
 app.component('BaseButton', BaseButton);
 app.component('DataTable', DataTable);
 app.component('Column', Column);
+app.component('Dialog', Dialog);
 
 app.use(PrimeVue);
 
