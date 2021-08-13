@@ -1,18 +1,18 @@
 <template>
   <BaseCard>
-    <Sorting @generate-people="getPeople" :isPlaying="isPlaying" />
+    <Game @generate-people="getPeople" @unsort="unsort" :isSorted="isSorted" />
     <Table :generatedPeople="people" @row-reorder="reorder" />
   </BaseCard>
 </template>
 
 <script>
 import Table from "./components/Main/Table.vue";
-import Sorting from "./components/Main/Sorting.vue";
+import Game from "./components/Main/Game.vue";
 
 export default {
   components: {
     Table,
-    Sorting,
+    Game,
   },
   data() {
     return {
@@ -27,8 +27,8 @@ export default {
     },
     reorder(values) {
       this.people = values;
-      // this.isArraySorted();
-      this.arraySortedOrNot(this.people, this.people.length);
+
+      this.isSorted = this.arraySortedOrNot(this.people, this.people.length);
     },
     arraySortedOrNot(arr, n) {
       // Array has one or no element
@@ -41,6 +41,9 @@ export default {
       // No unsorted pair found
       return true;
     },
+    unsort() {
+      this.isSorted = false;
+    }
   },
 };
 </script>
