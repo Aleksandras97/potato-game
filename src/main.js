@@ -8,6 +8,7 @@ import BaseButton from './components/UI/BaseButton.vue'
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Dialog from 'primevue/dialog';
+import InlineMessage from 'primevue/inlinemessage';
 
 
 import 'primevue/resources/themes/saga-blue/theme.css'       //theme
@@ -21,6 +22,8 @@ app.component('BaseButton', BaseButton);
 app.component('DataTable', DataTable);
 app.component('Column', Column);
 app.component('Dialog', Dialog);
+app.component('InlineMessage', InlineMessage);
+
 
 app.use(PrimeVue);
 
